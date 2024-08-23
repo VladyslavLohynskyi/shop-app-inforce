@@ -14,7 +14,7 @@ export interface IProduct {
    id: number;
    imageUrl: string;
    name: string;
-   count: 4;
+   count: number;
    size: ISize;
    weight: string;
    comments: IComment[];

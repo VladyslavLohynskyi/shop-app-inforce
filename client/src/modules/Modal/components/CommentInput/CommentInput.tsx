@@ -15,7 +15,7 @@ export const CommentInput: React.FC<CommentInputType> = ({
             <Input
                type='text'
                placeholder='Enter Description'
-               onChange={onDescriptionChange}
+               onChange={(e) => onDescriptionChange(e.target.value)}
             />
          </label>
          <label>
@@ -23,7 +23,7 @@ export const CommentInput: React.FC<CommentInputType> = ({
             <Input
                type='text'
                placeholder='Enter Date'
-               onChange={onDateChange}
+               onChange={(e) => onDateChange(e.target.value)}
             />
          </label>
       </div>

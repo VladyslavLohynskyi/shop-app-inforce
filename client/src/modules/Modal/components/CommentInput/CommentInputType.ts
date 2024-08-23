@@ -1,7 +1,7 @@
 import { IComment } from '../../../../utils/interfaces';
 
 export interface CommentInputType {
-   onDescriptionChange: () => void;
-   onDateChange: () => void;
+   onDescriptionChange: (text: string) => void;
+   onDateChange: (text: string) => void;
    comment: IComment;
 }

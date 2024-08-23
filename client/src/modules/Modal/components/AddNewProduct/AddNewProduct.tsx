@@ -7,8 +7,9 @@ import {
    ProductCommentKeyEnum,
 } from '../../../../utils/enums';
 import { Input } from '../../../ui/Input';
-import { IComment } from '../../../../utils/interfaces';
+import { IComment, IProduct } from '../../../../utils/interfaces';
 import { CommentInput } from '../CommentInput';
+import { addProduct } from '../../../../store/reducers/products/productsActionCreators';
 
 export const AddNewProduct: React.FC<AddNewProductType> = ({ onClose }) => {
    const dispatch = useAppDispatch();
@@ -20,7 +21,19 @@ export const AddNewProduct: React.FC<AddNewProductType> = ({ onClose }) => {
    const [height, setHeight] = useState<number>(1);
    const [weight, setWeight] = useState<number>(1);
    const [comments, setComments] = useState<IComment[]>([]);
-   const handleSubmit = async () => {};
+   const handleSubmit = async () => {
+      console.log(comments);
+      const product: IProduct = {
+         id: Date.now(),
+         name,
+         imageUrl,
+         count,
+         size: { width, height },
+         weight: weight + 'g',
+         comments,
+      };
+      dispatch(addProduct(product));
+   };
 
    const handleChangeName = (e: React.ChangeEvent<HTMLInputElement>) => {
       setName(e.target.value);
@@ -159,17 +172,17 @@ export const AddNewProduct: React.FC<AddNewProductType> = ({ onClose }) => {
                {comments.map((comment) => (
                   <CommentInput
                      key={comment.id}
-                     onDescriptionChange={() =>
+                     onDescriptionChange={(text: string) =>
                         handleChangeComment(
                            ProductCommentKeyEnum.DESCRIPTION,
-                           comment.description,
+                           text,
                            comment.id,
                         )
                      }
-                     onDateChange={() =>
+                     onDateChange={(text: string) =>
                         handleChangeComment(
                            ProductCommentKeyEnum.DATE,
-                           comment.description,
+                           text,
                            comment.id,
                         )
                      }

@@ -25,6 +25,11 @@ export const productsSlice = createSlice({
             state.products = data;
          }
       },
+
+      addProduct(state, action: PayloadAction<IProduct>) {
+         state.products = [...state.products, action.payload];
+         localStorage.setItem('products', JSON.stringify(state.products));
+      },
    },
 });
 
