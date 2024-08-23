@@ -1,4 +1,4 @@
-import { IProduct } from '../../../utils/interfaces';
+import { IProduct } from '../../../../utils/interfaces';
 
 export interface ProductType {
    product: IProduct;
