@@ -1,7 +1,12 @@
-import './App.css';
+import './App.scss';
+import { Shop } from './modules/shop/page';
 
 function App() {
-   return <div className='App'></div>;
+   return (
+      <div className='App'>
+         <Shop />
+      </div>
+   );
 }
 
 export default App;
