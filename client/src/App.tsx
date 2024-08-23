@@ -3,7 +3,7 @@ import { Shop } from './modules/shop/page';
 
 function App() {
    return (
-      <div className='App'>
+      <div className='app'>
          <Shop />
       </div>
    );

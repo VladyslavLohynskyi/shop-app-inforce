@@ -12,7 +12,7 @@ interface IComment {
 
 export interface IProduct {
    id: number;
-   imgUrl: string;
+   imageUrl: string;
    name: string;
    count: 4;
    size: ISize;
