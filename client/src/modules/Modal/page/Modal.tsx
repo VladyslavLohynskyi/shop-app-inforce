@@ -31,7 +31,7 @@ export const Modal: React.FC<ModalType> = ({
          <div className={onBlur ? 'onBlur' : ''}>
             <div className='modal' onClick={onClose}>
                <div
-                  className={`modal__content ${modalPosition}`}
+                  className={`modal__content modal-position`}
                   onClick={(e) => e.stopPropagation()}
                >
                   {children}

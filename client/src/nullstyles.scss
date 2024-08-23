@@ -42,14 +42,12 @@ body {
 #root {
    height: 100%;
 }
-input,
+
 button,
 textarea {
    font-family: inherit;
 }
-input::-ms-clear {
-   display: none;
-}
+
 button {
    cursor: pointer;
 }

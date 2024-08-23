@@ -3,3 +3,8 @@ export enum ButtonClassEnum {
    EDIT = 'edit',
    DELETE = 'delete',
 }
+
+export enum ProductCommentKeyEnum {
+   DESCRIPTION = 'description',
+   DATE = 'date',
+}

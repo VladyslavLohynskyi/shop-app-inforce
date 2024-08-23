@@ -3,7 +3,7 @@ interface ISize {
    height: number;
 }
 
-interface IComment {
+export interface IComment {
    id: number;
    productId: number;
    description: string;

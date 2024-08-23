@@ -28,3 +28,24 @@
    z-index: 2;
    overflow: hidden;
 }
+
+.modal-container {
+   padding: 20px;
+   width: 90vw;
+   max-width: 800px;
+   background-color: #fff;
+   height: fit-content;
+   max-height: 700px;
+   border-radius: 8px;
+   box-shadow:
+      0 0 0 1px rgba(29, 28, 29, 0.13),
+      0 18px 48px 0 #00000059;
+}
+
+.modal-position {
+   width: auto;
+   height: auto;
+   left: 50%;
+   top: 50%;
+   transform: translate(-50%, -50%);
+}
